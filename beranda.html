@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satgas PPKS Unsoed</title>
+    <link rel="shortcut icon" href="aset/Logo_Unsoed.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="beranda.html"><img src="aset/Logo_Unsoed.png" alt="" height="40px"></a>
+            <a href="beranda.html">PPKS <span>UNSOED</span></a>
+        </div>
+        <div class="navbar-nav">
+            <a href="">Beranda</a>
+            <a href="">Profil</a>
+            <a href="" class="nav-lapor">Lapor</a>
+            <a href="">Tracking Aduan</a>
+        </div>
+        <!-- Hamburger menu icon for mobile view -->
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+
+    <!-- hero section -->
+    <div class="hero">
+        <a href="lapor.html"><button onclick="">LAPORKAN!</button></a>
+    </div>
+
+    <!-- JS Responsif -->
+    <script>
+        function toggleMenu() {
+            const navbarNav = document.querySelector('.navbar-nav');
+            navbarNav.classList.toggle('active');
+            console.log("Hamburger menu clicked"); // Debugging log
+        }
+    </script>
+
+</body>
+</html>
