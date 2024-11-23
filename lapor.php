@@ -26,8 +26,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     try {
         // Query untuk memasukkan data laporan ke dalam database
-        $stmt = $conn->prepare("INSERT INTO laporan (nama_pelapor, jenis_identitas, nomor_identitas, unit_kerja, kategori, alamat, nomor_telepon, email, status_terlapor, nama_terlapor, nomor_telepon_terlapor, tanggal_peristiwa, lokasi_peristiwa, kronologi_peristiwa, kode_laporan, tanggal_laporan) 
-        VALUES (:nama_pelapor, :jenis_identitas, :nomor_identitas, :unit_kerja, :kategori, :alamat, :nomor_telepon, :email, :status_terlapor, :nama_terlapor, :nomor_telepon_terlapor, :tanggal_peristiwa, :lokasi_peristiwa, :kronologi_peristiwa, :kode_laporan, NOW())");
+        $stmt = $conn->prepare("INSERT INTO laporan (nama_pelapor, jenis_identitas, nomor_identitas, unit_kerja, kategori, alamat, nomor_telepon, email, status_pelapor, status_terlapor, nama_terlapor, nomor_telepon_terlapor, tanggal_peristiwa, lokasi_peristiwa, kronologi_peristiwa, kode_laporan, tanggal_laporan) 
+        VALUES (:nama_pelapor, :jenis_identitas, :nomor_identitas, :unit_kerja, :kategori, :alamat, :nomor_telepon, :email, :status_pelapor, :status_terlapor, :nama_terlapor, :nomor_telepon_terlapor, :tanggal_peristiwa, :lokasi_peristiwa, :kronologi_peristiwa, :kode_laporan, NOW())");
 
         // Bind parameter
         $stmt->bindParam(':nama_pelapor', $nama_pelapor);
@@ -38,6 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bindParam(':alamat', $alamat);
         $stmt->bindParam(':nomor_telepon', $nomor_telepon);
         $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':status_pelapor', $status_pelapor);
         $stmt->bindParam(':status_terlapor', $status_terlapor);
         $stmt->bindParam(':nama_terlapor', $nama_terlapor);
         $stmt->bindParam(':nomor_telepon_terlapor', $nomor_telepon_terlapor);
