@@ -241,6 +241,75 @@ body {
   margin-bottom: 20px;
 }
 
+/* Berita Section */
+.berita {
+  background-color: var(--cream);
+  padding: 3rem 7%;
+  text-align: center;
+}
+
+.berita h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: var(--dark);
+}
+
+.berita-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.berita-item {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 300px;
+  flex: 1 1 calc(33.333% - 2rem); /* Tiga kolom dengan jarak */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.berita-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.berita-item h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1rem;
+  color: var(--primary);
+}
+
+.berita-item p {
+  font-size: 0.95rem;
+  color: var(--dark);
+  margin: 0 1rem 1rem;
+  line-height: 1.6;
+}
+
+.berita-item a {
+  display: block;
+  background-color: var(--primary);
+  color: white;
+  padding: 0.8rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.berita-item a:hover {
+  background-color: #004c99;
+}
+
 /* Footer */
 footer {
   padding: 1.5rem 7%;
@@ -301,5 +370,14 @@ footer {
 
   .statistik-item {
     max-width: 100%;
+  }
+
+  .berita-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .berita-item {
+    max-width: 90%;
   }
 }
