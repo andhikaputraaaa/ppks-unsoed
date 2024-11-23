@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Satgas PPKS Unsoed</title>
+    <link rel="shortcut icon" href="aset/Logo_Unsoed.png" />
+    <link rel="stylesheet" href="css/style-lapor.css" />
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="beranda.html">
+                <img src="aset/Logo_Unsoed.png" alt="Logo Unsoed" height="40px" />
+            </a>
+            <a href="beranda.html">PPKS <span>UNSOED</span></a>
+        </div>
+        <div class="navbar-nav">
+            <a href="beranda.html">Beranda</a>
+            <a href="">Profil</a>
+            <a href="lapor.html" class="nav-lapor">Lapor</a>
+            <a href="">Tracking Aduan</a>
+        </div>
+    </nav>
+    <!-- hero section -->
+    <div class="hero">
+        <div class="petunjuk">
+            <h1>ADUAN ONLINE</h1>
+            <a href=""><button>Petunjuk Pelaporan</button></a>
+        </div>
+        <div class="form">
+            <form method="post" action="admin/lapor.php">
+                <!-- Pelapor Section -->
+                <div class="logo-form">
+                    <img src="aset/pelapor.png" width="40" height="40" alt="Pelapor Icon" />
+                    <h2>Pelapor</h2>
+                </div>
+                <div class="kirikanan">
+                    <div class="form-kiri">
+                        <table>
+                            <tr>
+                                <td>Nama Lengkap</td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="gap" name="nama_pelapor" id="nama_pelapor" required></td>
+                            </tr>
+                            <tr>
+                                <td>Jenis Identitas</td>
+                            </tr>
+                            <tr>
+                                <td><select class="gap" name="jenis_identitas" id="jenis_identitas" required>
+                                    <option value="ktp">Kartu Tanda Penduduk (KTP)</option>
+                                    <option value="ktm">Kartu Tanda Mahasiswa (KTM)</option>
+                                </select></td>
+                            </tr>
+                            <tr>
+                                <td>Nomor Identitas</td>
+                            </tr>
+                            <tr>
+                                <td><input type="number" class="gap" name="nomor_identitas" id="nomor_identitas" required></td>
+                            </tr>
+                            <tr>
+                                <td>Nama Unit Kerja/Fakultas/Instansi</td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="gap" name="unit_kerja" id="unit_kerja"></td>
+                            </tr>
+                            <tr>
+                                <td>Kategori</td>
+                            </tr>
+                            <tr>
+                                <td><select class="gap" name="kategori" id="kategori" required>
+                                    <option value="korban">Korban</option>
+                                    <option value="pelapor">Pelapor/Saksi</option>
+                                </select></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="form-kanan">
+                        <table>
+                            <tr>
+                                <td>Alamat</td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="gap" name="alamat" id="alamat" required></td>
+                            </tr>
+                            <tr>
+                                <td>Nomor Telepon</td>
+                            </tr>
+                            <tr>
+                                <td><input type="number" class="gap" name="nomor_telepon" id="nomor_telepon" required></td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                            </tr>
+                            <tr>
+                                <td><input type="email" class="gap" name="email" id="email" required></td>
+                            </tr>
+                            <tr>
+                                <td>Status Pelapor</td>
+                            </tr>
+                            <tr>
+                                <td><select class="gap" name="status_pelapor" id="status_pelapor" required>
+                                    <option value="mahasiswa">Mahasiswa</option>
+                                    <option value="dosen">Dosen</option>
+                                    <option value="tenaga">Tenaga Kependidikan</option>
+                                    <option value="masyarakat">Masyarakat Umum</option>
+                                </select></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Terlapor Section -->
+                <div class="logo-form">
+                    <img src="aset/terlapor.png" width="40" height="40" alt="Terlapor Icon" />
+                    <h2>Terlapor</h2>
+                </div>
+                <div class="kirikanan">
+                    <div class="form-kiri">
+                        <table>
+                            <tr>
+                                <td>Nama Lengkap Terlapor</td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="gap" name="nama_terlapor" id="nama_terlapor" required></td>
+                            </tr>
+                            <tr>
+                                <td>Nomor Telepon Terlapor</td>
+                            </tr>
+                            <tr>
+                                <td><input type="number" class="gap" name="nomor_telepon_terlapor" id="nomor_telepon_terlapor" required></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="form-kanan">
+                        <table>
+                            <tr>
+                                <td>Status Terlapor</td>
+                            </tr>
+                            <tr>
+                                <td><select class="gap" name="status_terlapor" id="status_terlapor" required>
+                                    <option value="mahasiswa">Mahasiswa</option>
+                                    <option value="dosen">Dosen</option>
+                                    <option value="tenaga">Tenaga Kependidikan</option>
+                                    <option value="masyarakat">Masyarakat Umum</option>
+                                </select></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Peristiwa Section -->
+                <div class="logo-form">
+                    <img src="aset/peristiwa.png" width="40" height="40" alt="Peristiwa Icon" />
+                    <h2>Peristiwa</h2>
+                </div>
+                <div class="kirikanan">
+                    <div class="form-kiri">
+                        <table>
+                            <tr>
+                                <td>Tanggal Peristiwa</td>
+                            </tr>
+                            <tr>
+                                <td><input type="date" class="gap" name="tanggal_peristiwa" id="tanggal_peristiwa" required></td>
+                            </tr>
+                            <tr>
+                                <td>Lokasi Peristiwa</td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="gap" name="lokasi_peristiwa" id="lokasi_peristiwa" required></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="form-kanan">
+                        <table>
+                            <tr>
+                                <td>Kronologi Peristiwa</td>
+                            </tr>
+                            <tr>
+                                <td><textarea class="gap" name="kronologi_peristiwa" id="kronologi_peristiwa" required></textarea></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="submit-button">
+                    <input type="submit" name="submit" id="submit" value="Kirim Laporan" />
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
