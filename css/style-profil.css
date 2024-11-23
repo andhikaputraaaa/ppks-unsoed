@@ -1,0 +1,132 @@
+:root {
+    --birmud: #D2E0FB;
+    --cream: #F9F3CC;
+    --ijo: #D7E5CA;
+    --biru: #8EACCD;
+    --dark: #333;
+    --primary: #0066CC;
+    --secondary: #FFDE16;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: var(--dark);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 7%;
+    background-color: var(--birmud);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Jarak antara gambar dan teks */
+}
+
+.navbar .navbar-logo img {
+    height: 40px;
+}
+
+.navbar .navbar-logo a {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--dark);
+}
+
+.navbar .navbar-logo span {
+    color: var(--secondary);
+}
+
+.navbar .navbar-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .navbar-nav a {
+    color: var(--dark);
+    font-size: 1.15rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar .navbar-nav .nav-lapor {
+    color: #FF5733; 
+}
+
+.navbar .navbar-nav .nav-lapor:hover {
+    color: #b72f10; 
+}
+
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(1);
+}
+
+.navbar .navbar-nav .nav-lapor::after {
+    background-color: #b72f10;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, var(--birmud) 30%, var(--cream) 70%);
+    padding: 1.4rem 7%;
+    text-align: center;
+}
+
+
+.hero .left img {
+    width: 400px;
+    height: auto;
+}
+
+.left {
+    float: left;
+    width: 30%;
+}
+
+.right {
+    float: right;
+    width: 70%;
+    padding-left: 100px;
+    padding-top: 70px;
+    text-align: left;
+}
