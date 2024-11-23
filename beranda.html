@@ -19,25 +19,56 @@
             <a href="beranda.html">Beranda</a>
             <a href="profil.html">Profil</a>
             <a href="lapor.html" class="nav-lapor">Lapor</a>
-            <a href="">Tracking Aduan</a>
+            <a href="tracking.html">Tracking Aduan</a>
         </div>
-        <!-- Hamburger menu icon for mobile view -->
-        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
     </nav>
 
     <!-- hero section -->
     <div class="hero">
-        <a href="lapor.html"><button onclick="">LAPORKAN!</button></a>
+        <h1>Bersama Ciptakan Kampus Aman dan Nyaman</h1> <br>
+        <a href="lapor.html"><button>LAPORKAN!</button></a>
     </div>
 
-    <!-- JS Responsif -->
-    <script>
-        function toggleMenu() {
-            const navbarNav = document.querySelector('.navbar-nav');
-            navbarNav.classList.toggle('active');
-            console.log("Hamburger menu clicked"); // Debugging log
-        }
-    </script>
+    <!-- Section: Pesan Penguatan -->
+    <div class="pesan-penguatan">
+        <div class="pesan-left">
+            <img src="aset/STOP.png" alt="Stop kekerasan seksual">
+        </div>
+        <div class="pesan-right">
+            <h1>Kamu Tidak Sendiri</h1>
+            <p>
+                Jika kamu mengalami kekerasan seksual, ingatlah bahwa kamu tidak sendiri.
+                Satgas PPKS Unsoed siap mendukungmu untuk mendapatkan keadilan dan perlindungan.
+                Laporkan segera, dan kami akan membantumu!
+            </p>
+        </div>
+    </div>
 
+    <!-- Section: Statistik -->
+    <div class="statistik-laporan">
+        <h2>Statistik Laporan</h2>
+        <div class="statistik-container">
+            <div class="grafik">
+                <canvas id="chartAduan"></canvas>
+            </div>
+            <div class="grafik-aduan">
+                <div class="total-aduan">
+                    <h3 id="total-aduan">0</h3>
+                    <p>Total Aduan</p>
+                </div>
+                <div class="aduan-selesai">
+                    <h3 id="aduan-selesai">0</h3>
+                    <p>Aduan Selesai</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Satgas PPKS Unsoed. All Rights Reserved.</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="beranda.js"></script>
 </body>
 </html>
