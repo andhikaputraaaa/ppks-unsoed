@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 22, 2024 at 06:56 PM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 8.1.10
+-- Generation Time: Nov 23, 2024 at 08:41 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -37,30 +37,32 @@ CREATE TABLE `laporan` (
   `alamat` text DEFAULT NULL,
   `nomor_telepon` varchar(20) DEFAULT NULL,
   `email` varchar(255) NOT NULL,
-  `status_terlapor` enum('Mahasiswa','Dosen','Tenaga Kependidikan','Masyarakat Umum') NOT NULL,
+  `status_pelapor` enum('Mahasiswa','Dosen','Tenaga Kependidikan','Masyarakat Umum') NOT NULL,
   `nama_terlapor` varchar(255) DEFAULT NULL,
   `nomor_telepon_terlapor` varchar(20) DEFAULT NULL,
+  `status_terlapor` enum('Mahasiswa','Dosen','Tenaga Kependidikan','Masyarakat Umum') NOT NULL,
   `tanggal_peristiwa` date DEFAULT NULL,
   `lokasi_peristiwa` varchar(255) DEFAULT NULL,
   `kronologi_peristiwa` text DEFAULT NULL,
   `status` enum('Belum Dikerjakan','Sedang Dikerjakan','Selesai') DEFAULT 'Belum Dikerjakan',
   `kode_laporan` varchar(20) DEFAULT NULL,
   `tanggal_laporan` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `laporan`
 --
 
-INSERT INTO `laporan` (`id`, `nama_pelapor`, `jenis_identitas`, `nomor_identitas`, `unit_kerja`, `kategori`, `alamat`, `nomor_telepon`, `email`, `status_terlapor`, `nama_terlapor`, `nomor_telepon_terlapor`, `tanggal_peristiwa`, `lokasi_peristiwa`, `kronologi_peristiwa`, `status`, `kode_laporan`, `tanggal_laporan`) VALUES
-(1, 'kazuma', '', '111111', 'ui', '', 'bekasi', '081391795829', '123@gmail.com', 'Mahasiswa', 'jinn kazama', '98912313', '2009-10-08', 'Poris', 'kazuya berubah menjadi jinn kazama', 'Sedang Dikerjakan', 'LAP-673F36A0ECC963.2', '2024-11-21 13:33:20'),
-(2, 'kazuma', '', '111111', 'ui', '', 'poris', '081391795829', '123@gmail.com', 'Mahasiswa', 'jinn kazama', '98912313', '2005-10-19', 'Poris', 'kazuya berubah menjadi jinn kazama', 'Sedang Dikerjakan', 'LAP-673F38417C2586.1', '2024-11-21 13:40:17'),
-(3, 'blater', '', '111111', 'ui', '', 'poris', '081391795829', '123@gmail.com', 'Mahasiswa', 'jinn kazama', '98912313', '2009-09-23', 'Poris', 'blater meledak', 'Sedang Dikerjakan', 'LAP-67404D63C35F91.9', '2024-11-22 09:22:43'),
-(4, 'blater', '', '111111', 'ui', '', 'poris', '081391795829', '123@gmail.com', 'Mahasiswa', 'jinn kazama', '98912313', '2009-09-23', 'Poris', 'blater meledak', 'Selesai', 'LAP-67404E9C91E688.2', '2024-11-22 09:27:56'),
-(5, 'blater', '', '111111', 'ui', '', 'poris', '081391795829', '123@gmail.com', 'Mahasiswa', 'jinn kazama', '98912313', '2009-09-23', 'Poris', 'blater meledak', 'Selesai', 'LAP-674050429068C1.0', '2024-11-22 09:34:58'),
-(6, 'bulan poris', '', '111111', 'ui', '', 'poris', '081391795829', '123@gmail.com', 'Mahasiswa', 'jinn kazama', '98912313', '2009-09-23', 'Poris', 'blater meledak', 'Selesai', 'LAP-674053ED978188.7', '2024-11-22 09:50:37'),
-(7, 'Kayu jati', '', '222222', 'ugm', '', 'kyoto', '081391795829', '123@gmail.com', 'Mahasiswa', 'daun pisang', '98912313', '2009-02-18', 'bulan', 'kayu jatinya patah', 'Selesai', 'LAP-6740B22A8DC583.7', '2024-11-22 16:32:42'),
-(8, 'oppo neo 5', '', '222222', 'ugm', '', 'kyoto', '081391795829', '123@gmail.com', 'Mahasiswa', 'daun pisang', '98912313', '2009-02-18', 'bulan', 'kayu jatinya patah', 'Sedang Dikerjakan', 'LAP-6740B2961264B6.4', '2024-11-22 16:34:30');
+INSERT INTO `laporan` (`id`, `nama_pelapor`, `jenis_identitas`, `nomor_identitas`, `unit_kerja`, `kategori`, `alamat`, `nomor_telepon`, `email`, `status_pelapor`, `nama_terlapor`, `nomor_telepon_terlapor`, `status_terlapor`, `tanggal_peristiwa`, `lokasi_peristiwa`, `kronologi_peristiwa`, `status`, `kode_laporan`, `tanggal_laporan`) VALUES
+(1, 'kazuma', '', '111111', 'ui', '', 'bekasi', '081391795829', '123@gmail.com', 'Mahasiswa', 'jinn kazama', '98912313', 'Mahasiswa', '2009-10-08', 'Poris', 'kazuya berubah menjadi jinn kazama', 'Sedang Dikerjakan', 'LAP-673F36A0ECC963.2', '2024-11-21 13:33:20'),
+(2, 'kazuma', '', '111111', 'ui', '', 'poris', '081391795829', '123@gmail.com', 'Mahasiswa', 'jinn kazama', '98912313', 'Mahasiswa', '2005-10-19', 'Poris', 'kazuya berubah menjadi jinn kazama', 'Selesai', 'LAP-673F38417C2586.1', '2024-11-21 13:40:17'),
+(3, 'blater', '', '111111', 'ui', '', 'poris', '081391795829', '123@gmail.com', 'Mahasiswa', 'jinn kazama', '98912313', 'Mahasiswa', '2009-09-23', 'Poris', 'blater meledak', 'Sedang Dikerjakan', 'LAP-67404D63C35F91.9', '2024-09-22 09:22:43'),
+(4, 'blater', '', '111111', 'ui', '', 'poris', '081391795829', '123@gmail.com', 'Mahasiswa', 'jinn kazama', '98912313', 'Mahasiswa', '2009-09-23', 'Poris', 'blater meledak', 'Selesai', 'LAP-67404E9C91E688.2', '2024-11-22 09:27:56'),
+(5, 'blater', '', '111111', 'ui', '', 'poris', '081391795829', '123@gmail.com', 'Mahasiswa', 'jinn kazama', '98912313', 'Mahasiswa', '2009-09-23', 'Poris', 'blater meledak', 'Selesai', 'LAP-674050429068C1.0', '2024-11-22 09:34:58'),
+(6, 'bulan poris', '', '111111', 'ui', '', 'poris', '081391795829', '123@gmail.com', 'Mahasiswa', 'jinn kazama', '98912313', 'Mahasiswa', '2009-09-23', 'Poris', 'blater meledak', 'Selesai', 'LAP-674053ED978188.7', '2024-11-22 09:50:37'),
+(7, 'Kayu jati', '', '222222', 'ugm', '', 'kyoto', '081391795829', '123@gmail.com', 'Mahasiswa', 'daun pisang', '98912313', 'Mahasiswa', '2009-02-18', 'bulan', 'kayu jatinya patah', 'Selesai', 'LAP-6740B22A8DC583.7', '2024-11-22 16:32:42'),
+(8, 'oppo neo 5', '', '222222', 'ugm', '', 'kyoto', '081391795829', '123@gmail.com', 'Mahasiswa', 'daun pisang', '98912313', 'Mahasiswa', '2009-02-18', 'bulan', 'kayu jatinya patah', 'Sedang Dikerjakan', 'LAP-6740B2961264B6.4', '2024-11-22 16:34:30'),
+(11, 'Paundra', 'KTP', '1372819912', 'UI/UX', 'Korban', 'Sokaraja', '08162', 'paundra@gevano.com', 'Mahasiswa', 'Andhika', '0816387299102', 'Mahasiswa', '2024-11-19', 'Ft blater', 'grep grep', 'Belum Dikerjakan', 'LAP-674184DAAA9BE8.4', '2024-11-23 07:31:38');
 
 -- --------------------------------------------------------
 
@@ -73,7 +75,7 @@ CREATE TABLE `satgas_logs` (
   `id_satgas` int(11) NOT NULL,
   `id_laporan` int(11) NOT NULL,
   `tanggal_ambil` datetime DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `satgas_logs`
@@ -103,7 +105,7 @@ CREATE TABLE `users` (
   `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
   `role` enum('admin','satgas') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
@@ -149,7 +151,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `laporan`
 --
 ALTER TABLE `laporan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `satgas_logs`
