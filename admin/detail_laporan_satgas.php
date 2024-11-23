@@ -13,13 +13,14 @@ $row = $query->fetch(PDO::FETCH_ASSOC);
 if (!$row) {
     die("Laporan tidak ditemukan.");
 }
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $update_sql = "UPDATE laporan SET status = 'Selesai' WHERE id = :id";
     $update_query = $conn->prepare($update_sql);
     $update_query->execute(['id' => $id]);
 
     if ($update_query->rowCount() > 0) {
-        header("Location: dashboard_admin.php");
+        header("Location: laporan_saya.php"); // Ubah URL ke halaman "Laporan Saya"
         exit;
     } else {
         echo "Gagal mengubah status.";
@@ -36,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-    <?php include 'includes/sidebar.php'; ?>
+    <?php include 'includes/sidebar_satgas.php'; ?>
     <div class="main-content">
         <h2>Detail Laporan</h2>
         <p><strong>Nama Pelapor:</strong> <?= htmlspecialchars($row['nama_pelapor']) ?></p>
