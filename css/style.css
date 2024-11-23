@@ -310,6 +310,154 @@ body {
   background-color: #004c99;
 }
 
+
+/* Testimoni Section */
+.testimoni {
+  background-color: var(--biru);
+  padding: 3rem 7%;
+  text-align: center;
+}
+
+.testimoni h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.testimoni-item {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 300px;
+  text-align: left;
+  position: relative;
+}
+
+.testimoni-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--dark);
+  margin-bottom: 1.5rem;
+}
+
+.testimoni-item span {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--primary);
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+/* Container Utama Swiper */
+.swiper-container {
+  width: 100%;
+  position: relative; /* Memastikan elemen pagination dan lainnya bisa diatur posisinya */
+  padding: 2rem 0; /* Jarak untuk elemen di dalamnya */
+}
+
+/* Wrapper untuk Slide */
+.swiper-wrapper {
+  display: flex; /* Flexbox untuk slide */
+}
+
+/* Slide */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling Testimoni Item */
+.testimoni-item {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 250px;
+  min-height: 300px; /* Menetapkan tinggi minimum untuk semua card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Memastikan elemen di dalam card tersebar dengan rapi */
+  text-align: left;
+  margin: 0 1rem;
+}
+
+.testimoni-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.testimoni-item span {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #0066cc; /* Warna teks */
+  position: relative;
+  align-self: flex-end; /* Memastikan elemen ini berada di bawah */
+  margin-top: auto; /* Dorong elemen ini ke bawah jika card lebih tinggi */
+}
+
+/* Pagination */
+.swiper-pagination {
+  position: absolute; /* Pagination tetap berada di container Swiper */
+  bottom: 10px; /* Posisi pagination dari bawah */
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10; /* Supaya tidak terhalang elemen lain */
+}
+
+.swiper-pagination-bullet {
+  background-color: white;
+  opacity: 0.8;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #0066cc; /* Warna aktif */
+  transform: scale(1.3); /* Membesarkan bullet aktif */
+  opacity: 1;
+}
+
+/* Custom Autoplay Animasi */
+.swiper-pagination-bullet-active:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(0, 102, 204, 0.5);
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+
 /* Footer */
 footer {
   padding: 1.5rem 7%;
@@ -379,5 +527,26 @@ footer {
 
   .berita-item {
     max-width: 90%;
+  }
+
+  .testimoni-container {
+    flex-direction: column;
+  }
+
+  .testimoni-item {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .swiper-container {
+    padding: 1.5rem 0; /* Kurangi padding untuk layar kecil */
+  }
+
+  .testimoni-item {
+    max-width: 90%; /* Lebar slide lebih kecil di layar kecil */
+  }
+
+  .swiper-pagination {
+    bottom: 5px; /* Atur ulang posisi pagination */
   }
 }

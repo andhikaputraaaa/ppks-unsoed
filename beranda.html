@@ -6,6 +6,7 @@
     <title>Satgas PPKS Unsoed</title>
     <link rel="shortcut icon" href="aset/Logo_Unsoed.png">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
 
@@ -64,6 +65,7 @@
         </div>
     </div>
 
+    <!-- Berita section -->
     <div class="berita">
         <h2>Berita dan Kegiatan Terbaru</h2>
         <div class="berita-container">
@@ -91,11 +93,98 @@
         </div>
     </div>
     
+    <!--Testimoni-->
+    <div class="testimoni">
+        <h2>Apa Kata Mereka?</h2>
+        <!-- Container Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Testimoni 1 -->
+                <div class="swiper-slide">
+                    <div class="testimoni-item">
+                        <p>"Satgas PPKS sangat membantu saya dalam menyelesaikan masalah. Mereka profesional dan memberikan rasa aman."</p>
+                        <span>- Korban (Anonim)</span>
+                    </div>
+                </div>
+                <!-- Testimoni 2 -->
+                <div class="swiper-slide">
+                    <div class="testimoni-item">
+                        <p>"Saya merasa didukung secara psikologis dan hukum. Prosesnya cepat dan jelas."</p>
+                        <span>- Saksi Pelapor (Anonim)</span>
+                    </div>
+                </div>
+                <!-- Testimoni 3 -->
+                <div class="swiper-slide">
+                    <div class="testimoni-item">
+                        <p>"Langkah pencegahan yang dilakukan Satgas sangat membantu membangun lingkungan kampus yang aman."</p>
+                        <span>- Mahasiswa Unsoed</span>
+                    </div>
+                </div>
+                <!-- Testimoni 4 -->
+                <div class="swiper-slide">
+                    <div class="testimoni-item">
+                        <p>"Dukungan dari Satgas membuat saya merasa tidak sendirian menghadapi kasus yang berat ini."</p>
+                        <span>- Korban Kekerasan (Anonim)</span>
+                    </div>
+                </div>
+                <!-- Testimoni 5 -->
+                <div class="swiper-slide">
+                    <div class="testimoni-item">
+                        <p>"Kegiatan edukasi yang dilakukan Satgas sangat membuka mata kami tentang pentingnya kesadaran akan isu ini."</p>
+                        <span>- Dosen Fakultas Hukum</span>
+                    </div>
+                </div>
+                <!-- Testimoni 6 -->
+                <div class="swiper-slide">
+                    <div class="testimoni-item">
+                        <p>"Saya sangat merekomendasikan siapa saja yang membutuhkan bantuan untuk segera menghubungi Satgas. Mereka sangat responsif."</p>
+                        <span>- Pelapor (Anonim)</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    
+    
 
     <footer>
         <p>© 2024 Satgas PPKS Unsoed. All Rights Reserved.</p>
     </footer>
-    
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper-container', {
+        loop: true, 
+        slidesPerView: 4, 
+        spaceBetween: 30, 
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true, 
+        },
+        autoplay: {
+            delay: 4000, // Perpindahan otomatis setiap 4 detik
+            disableOnInteraction: false,
+        },
+        breakpoints: { // Responsif
+            1024: {
+                slidesPerView: 4,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            480: {
+                slidesPerView: 1,
+            },
+        },
+    });
+</script>
+
+</script>
+
+    <!-- Chart -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="beranda.js"></script>
 </body>
