@@ -1,0 +1,228 @@
+:root {
+    --birmud: #d2e0fb;
+    --cream: #f9f3cc;
+    --ijo: #d7e5ca;
+    --red: #ff5733;
+    --ashBlue: #8eaccd;
+    --dark: #333;
+    --primary: #0066cc;
+    --secondary: #ffde16;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+  }
+  
+  body {
+    background-color: #f4f6f9;
+    color: var(--dark);
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 7%;
+    background-color: var(--birmud);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar .navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; 
+  }
+  
+  .navbar .navbar-logo img {
+    height: 40px;
+  }
+  
+  .navbar .navbar-logo a {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--dark);
+  }
+  
+  .navbar .navbar-logo span {
+    color: var(--secondary);
+  }
+  
+  .navbar .navbar-nav {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .navbar .navbar-nav a {
+    color: var(--dark);
+    font-size: 1.15rem;
+    position: relative;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .navbar .navbar-nav .nav-lapor {
+    color: #ff5733;
+  }
+  
+  .navbar .navbar-nav .nav-lapor:hover {
+    color: #b72f10;
+  }
+  
+  .navbar .navbar-nav a:hover {
+    color: var(--primary);
+  }
+  
+  .navbar .navbar-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(1);
+  }
+  
+  .navbar .navbar-nav .nav-lapor::after {
+    background-color: #b72f10;
+  }
+
+/* gap navbar */
+.batasNav { 
+    background-color: black;
+    height: 86.5px;
+}
+
+.deskrip {
+    display: flex;
+    height: 100vh;
+    width: auto;
+}
+
+.laporan {
+    height: 100%;
+    width: 50%;
+}
+
+.krem {
+    background-color: var(--cream);
+    justify-content: center;
+    display: grid;
+    padding: 40px;
+    border-radius: 0 0 100px 0;
+    height: 100%;
+    width: auto;
+}
+
+.detail {
+    height: 100px;
+    width: 100%;
+}
+
+.detail p {
+    font-size: 2.5em;
+}
+
+.ket {
+    align-items: center;
+    display: flex;
+    gap: 5px;
+}
+
+.ket img {
+    width: 30px;
+}
+
+.ket h1 {
+    color: var(--ashBlue);
+    font-size: 2em;
+}
+
+.hasil {
+    padding: 60px;
+    height: 100%;
+    width: 50%;
+}
+
+.hasil h1 {
+    color: var(--red);
+    font-size: 3.5em;
+    text-align: center;
+}
+
+.hasil p {
+    text-align: justify;
+    font-size: 1.5em;
+    padding: 30px;
+}
+
+.trackingBar{
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 50vh;
+  width: 100%;
+}
+
+.progres {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.progres p {
+  color: var(--red);
+  font-size: 1.5em;
+  text-align: center;
+  max-width: 50%;
+}
+
+.bullet {
+  background-color: gray;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.bar {
+  position: absolute;
+  background-color: gray;
+  height: 10px;
+  width: 530px;
+  margin-bottom: 55px;
+
+}
+
+.bar.left{
+  margin-left: 100px;
+}
+
+.bar.kanan {
+  margin-left: 650px;
+}
+
+footer {
+    padding: 1.5rem 7%;
+    background-color: var(--birmud);
+    text-align: center;
+    color: var(--dark);
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
