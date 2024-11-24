@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->execute();
 
         // Redirect setelah data berhasil disimpan
-        header("Location: success.php");
+        header("Location: success.php?kode_laporan=" . urlencode($kode_laporan));
         exit();
     } catch (PDOException $e) {
         // Menangani error jika terjadi masalah dalam eksekusi query
