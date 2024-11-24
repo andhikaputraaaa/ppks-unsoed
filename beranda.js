@@ -100,3 +100,29 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => console.error('Error fetching totals:', error));
 });
+
+// swiper
+const swiper = new Swiper('.swiper-container', {
+    loop: true, 
+    slidesPerView: 3, 
+    spaceBetween: 20, 
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true, 
+    },
+    autoplay: {
+        delay: 4000, // Perpindahan otomatis setiap 4 detik
+        disableOnInteraction: false,
+    },
+    breakpoints: { // Responsif
+        1024: {
+            slidesPerView: 3,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+        480: {
+            slidesPerView: 1,
+        },
+    },
+});
