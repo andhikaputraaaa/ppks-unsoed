@@ -61,7 +61,7 @@
   }
   
   .ticket-info span:hover {
-    transform: scale(1.05); /* Sedikit memperbesar kode tiket saat hover */
+    transform: scale(1.05);
   }
   
   
