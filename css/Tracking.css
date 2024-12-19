@@ -102,16 +102,11 @@
     background-color: #b72f10;
   }
 
-/* gap navbar */
-.batasNav { 
-  background-color: black;
-  height: 86.5px;
-}
-
 .deskrip {
     display: flex;
     height: 100vh;
     width: auto;
+    margin-top: 5%;
 }
 
 .laporan {
@@ -211,7 +206,7 @@
 .bar-left {
   position: absolute;
   height: 10px;
-  width: 530px;
+  width: 70%;
   margin-bottom: 55px;
   z-index: -1;
   left: 100px;
@@ -220,7 +215,7 @@
 .bar-right {
   position: absolute;
   height: 10px;
-  width: 530px;
+  width: 70%;
   margin-bottom: 55px;
   z-index: -1;
   right: 100px;

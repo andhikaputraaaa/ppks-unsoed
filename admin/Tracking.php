@@ -36,7 +36,7 @@ if ($data['status'] == "Belum Dikerjakan") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../aset/Logo_Unsoed.png">
-    <link rel="stylesheet" href="../css/Tracking.css">
+    <link rel="stylesheet" href="../css/Tracking.css?v=1.0">
     <title>Tracking Aduan</title>
 </head>
 <body>
@@ -54,8 +54,6 @@ if ($data['status'] == "Belum Dikerjakan") {
             <a href="inputTracking.php">Tracking Aduan</a>
         </div>
     </nav>
-
-    <div class="batasNav"></div>
     
     <!-- detail -->
     <div class="deskrip">
