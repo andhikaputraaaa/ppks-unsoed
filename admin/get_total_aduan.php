@@ -1,31 +1,31 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "ppks_db";
+include 'includes/db.php';
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+try {
+    // Check if the connection is successful
+    if ($conn) {
+        // Fetch total number of reports
+        $sql_total = "SELECT COUNT(*) as total FROM laporan";
+        $stmt_total = $conn->prepare($sql_total);
+        $stmt_total->execute();
+        $total_aduan = $stmt_total->fetch(PDO::FETCH_ASSOC)['total'];
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+        // Fetch number of completed reports
+        $sql_completed = "SELECT COUNT(*) as completed FROM laporan WHERE status = 'Selesai'";
+        $stmt_completed = $conn->prepare($sql_completed);
+        $stmt_completed->execute();
+        $aduan_selesai = $stmt_completed->fetch(PDO::FETCH_ASSOC)['completed'];
+
+        echo json_encode([
+            'total_aduan' => $total_aduan,
+            'aduan_selesai' => $aduan_selesai
+        ]);
+    } else {
+        throw new PDOException("Database connection failed");
+    }
+} catch (PDOException $e) {
+    http_response_code(500); 
+    echo json_encode(['error' => $e->getMessage()]);
+    exit;
 }
-
-// Fetch total number of reports
-$sql_total = "SELECT COUNT(*) as total FROM laporan";
-$result_total = $conn->query($sql_total);
-$total_aduan = $result_total->fetch_assoc()['total'];
-
-// Fetch number of completed reports
-$sql_completed = "SELECT COUNT(*) as completed FROM laporan WHERE status = 'Selesai'";
-$result_completed = $conn->query($sql_completed);
-$aduan_selesai = $result_completed->fetch_assoc()['completed'];
-
-$conn->close();
-
-echo json_encode([
-    'total_aduan' => $total_aduan,
-    'aduan_selesai' => $aduan_selesai
-]);
 ?>
