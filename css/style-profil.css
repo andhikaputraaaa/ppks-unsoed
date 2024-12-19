@@ -139,3 +139,7 @@ footer {
     font-size: 0.9rem;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+.content {
+   margin-top: 30px;
+}
