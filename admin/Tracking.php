@@ -44,11 +44,11 @@ if ($data['status'] == "Belum Dikerjakan") {
     <!-- navbar -->
     <nav class="navbar">
         <div class="navbar-logo">
-            <a href="../beranda.html"><img src="../aset/Logo_Unsoed.png" alt="" height="40px"></a>
-            <a href="../beranda.html">PPKS <span>UNSOED</span></a>
+            <a href="../index.html"><img src="../aset/Logo_Unsoed.png" alt="" height="40px"></a>
+            <a href="../index.html">PPKS <span>UNSOED</span></a>
         </div>
         <div class="navbar-nav">
-            <a href="../beranda.html">Beranda</a>
+            <a href="../index.html">Beranda</a>
             <a href="../profil.html">Profil</a>
             <a href="../lapor.html" class="nav-lapor">Lapor</a>
             <a href="inputTracking.php">Tracking Aduan</a>
